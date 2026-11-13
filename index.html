@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://reflectionn.ru/">
+<meta property="og:title" content="Рефлекшн — ногтевая студия в Химках">
+<meta property="og:url" content="https://reflectionn.ru/">
+<meta property="og:type" content="website">
+<meta name="description" content="Ногтевая студия «Рефлекшн» в Химках: маникюр и педикюр под ключ, наращивание, DIP-система, плёнки. Онлайн-запись.">
+<title>Рефлекшн — ногтевая студия в Химках</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Golos+Text:wght@400..700&display=swap">
+<style>
+body{margin:0;background:#ECECEE}
+a{color:#C2185B}a:hover{color:#A0144B}
+.mirror{transform:scaleY(-1);-webkit-mask-image:linear-gradient(to top,rgba(0,0,0,.2) 0%,rgba(0,0,0,0) 75%);mask-image:linear-gradient(to top,rgba(0,0,0,.2) 0%,rgba(0,0,0,0) 75%)}
+.lead{flex:1;border-bottom:1px dotted #9A9AA0;transform:translateY(-5px);min-width:24px}
+.lead-d{flex:1;border-bottom:1px dotted #5E5E62;transform:translateY(-5px);min-width:24px}
+.try-stage{position:relative;display:flex;flex-direction:column;align-items:center;padding:64px 0 0;overflow:hidden;touch-action:none;cursor:crosshair;user-select:none}
+.finger{position:relative;width:250px;height:390px;border-radius:125px 125px 34px 34px/150px 150px 34px 34px;background:linear-gradient(90deg,#C99A8A 0%,#E7C3B5 22%,#F2D6CA 50%,#E6BFB0 78%,#C69585 100%);box-shadow:inset 0 -40px 60px -30px rgba(80,40,40,.35)}
+.nail{position:absolute;left:25px;top:-6px;width:200px;height:300px;transition:clip-path .45s ease}
+.nail::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(40,10,20,.28) 0%,rgba(40,10,20,0) 20%,rgba(255,255,255,0) 80%,rgba(40,10,20,.28) 100%)}
+.nail::after{z-index:1;content:"";position:absolute;left:0;right:0;bottom:0;height:18px;background:linear-gradient(rgba(0,0,0,0),rgba(90,40,50,.25))}
+.s-oval .nail{clip-path:path("M20 120 C20 40 60 0 100 0 C140 0 180 40 180 120 L180 250 C180 285 145 300 100 300 C55 300 20 285 20 250 Z")}
+.s-almond .nail{clip-path:path("M24 150 C24 80 72 20 100 0 C128 20 176 80 176 150 L178 250 C178 285 145 300 100 300 C55 300 22 285 22 250 Z")}
+.s-square .nail{clip-path:path("M20 22 C20 8 30 2 44 2 L156 2 C170 2 180 8 180 22 L180 250 C180 285 145 300 100 300 C55 300 20 285 20 250 Z")}
+.s-ballerina .nail{clip-path:path("M26 130 L50 14 C52 6 58 2 66 2 L134 2 C142 2 148 6 150 14 L174 130 L178 250 C178 285 145 300 100 300 C55 300 22 285 22 250 Z")}
+.t-gloss .nail{background:radial-gradient(ellipse 16% 26% at var(--mx) var(--my),rgba(255,255,255,.95),rgba(255,255,255,.35) 35%,rgba(255,255,255,0) 70%),radial-gradient(ellipse 60% 50% at var(--mx) var(--my),rgba(255,255,255,.18),rgba(255,255,255,0) 70%),linear-gradient(165deg,#E0407F 0%,#C2185B 45%,#8E0F42 100%)}
+.t-cat .nail{background:radial-gradient(ellipse 140% 13% at var(--mx) var(--my),rgba(255,236,244,.95),rgba(231,169,192,.65) 28%,rgba(168,67,107,.25) 55%,rgba(0,0,0,0) 75%),radial-gradient(circle,rgba(255,255,255,.09) 0 1px,rgba(0,0,0,0) 1.6px) 0 0/6px 6px,linear-gradient(170deg,#3A1A28 0%,#1E0D15 60%,#12080D 100%)}
+.t-chrome .nail{background:radial-gradient(ellipse 14% 22% at var(--mx) var(--my),rgba(255,255,255,1),rgba(255,255,255,0) 70%),conic-gradient(from var(--ang) at var(--mx) var(--my),#F7EEF2,#C7AEBB,#FFFFFF,#A78596,#F1E3E9,#B898A8,#F7EEF2)}
+.t-french .nail{background:radial-gradient(ellipse 16% 24% at var(--mx) var(--my),rgba(255,255,255,.9),rgba(255,255,255,0) 70%),radial-gradient(ellipse 75% 78% at 50% 100%,#F6DDE3 0,#EFCFD8 97%,rgba(239,207,216,.55) 99%,rgba(239,207,216,0) 100%),linear-gradient(180deg,#FFFFFF,#FBF6F4)}
+.try-mirror{transform:scaleY(-1);height:150px;overflow:hidden;-webkit-mask-image:linear-gradient(to top,rgba(0,0,0,.35) 0%,rgba(0,0,0,0) 85%);mask-image:linear-gradient(to top,rgba(0,0,0,.35) 0%,rgba(0,0,0,0) 85%);display:flex;flex-direction:column;justify-content:flex-end}
+.chip{border:1px solid #5E5E62;background:transparent;color:#ECECEE;font:inherit;font-size:14px;font-weight:600;letter-spacing:1px;padding:12px 16px;cursor:pointer;min-height:44px}
+.chip[aria-pressed="true"]{background:#FF9CC2;border-color:#FF9CC2;color:#141414}
+.chip:hover{border-color:#FF9CC2}
+@media (max-width: 760px){
+.hdr{grid-template-columns:1fr auto !important;padding:16px 32px !important;gap:12px !important}
+.hdr-nav,.hdr-contacts{display:none !important}
+.hdr-logo{justify-self:start !important;font-size:20px !important;letter-spacing:6px !important}
+.hero-logo img{height:auto !important;width:86% !important}
+.hdr-right a{padding:12px 16px !important}
+#top{padding-top:36px !important}
+.hero-col{border-left:0 !important;padding:22px 0 !important}
+.hero-first{padding-top:28px !important}
+.hero-col:not(.hero-first){border-top:1px solid #D2D2D6 !important}
+.nums{grid-template-columns:1fr 1fr !important;column-gap:16px}
+.nums>div{flex-direction:column;align-items:flex-start !important;gap:4px !important;padding:22px 0 !important}
+.num-big{font-size:34px !important}
+.try-stage{padding-top:40px !important}
+.try-stage .finger{transform:scale(.86);transform-origin:center bottom}
+.try-mirror{height:110px !important}
+.try-text{padding:24px 0 64px !important}
+.rit{border-right:0 !important;margin-right:0 !important;border-bottom:1px solid #D2D2D6;display:grid !important;grid-template-columns:64px 1fr;column-gap:16px;padding:22px 0 !important}
+.rit>span:first-child{font-size:40px !important;grid-row:span 2}
+.perks{justify-content:center !important;font-size:15px !important;gap:8px 14px !important;letter-spacing:2px !important}
+.find-row{padding-right:0 !important;flex-wrap:wrap}
+.find-cta{margin-right:0 !important}
+section,header+section{scroll-margin-top:12px}
+.kick-3{display:none}
+#ritual,#price{padding-top:64px !important;padding-bottom:56px !important}
+#guests{padding-top:72px !important;padding-bottom:56px !important}
+#assistant>div{padding-top:72px !important;padding-bottom:72px !important}
+#find{padding-top:56px !important}
+#find iframe{height:320px}
+#find [role="img"]{min-height:320px !important}
+footer{margin-top:56px !important}
+}
+</style>
+
+</head>
+<body>
+
+<div style="background: #ECECEE; color: #141414; font-family: 'Golos Text', Arial, sans-serif; min-height: 100vh">
+
+<div style="background: #141414; color: #E6E6E8; font-size: 13px; letter-spacing: 1px">
+<div style="max-width: 1280px; margin: 0 auto; padding: 10px 32px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px">
+<span>Химки, Совхозная ул., 2 · есть парковка</span>
+<span>Открыто до 21:00 · <a href="tel:+79778518748" style="color: #FF9CC2; text-decoration: none; font-weight: 600">+7 977 851-87-48</a></span>
+</div>
+</div>
+
+<header class="hdr" style="max-width: 1280px; margin: 0 auto; padding: 26px 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); align-items: center; gap: 16px; border-bottom: 1px solid #141414">
+<nav class="hdr-nav" style="display: flex; flex-wrap: wrap; gap: 26px; font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase">
+<a href="#price" style="color: #141414; text-decoration: none">Прайс</a>
+<a href="#ritual" style="color: #141414; text-decoration: none">Процедура</a>
+<a href="#tryon" style="color: #141414; text-decoration: none">Примерка</a>
+<a href="#guests" style="color: #141414; text-decoration: none">Гости о нас</a>
+</nav>
+<a href="#top" class="hdr-logo" style="justify-self: center; text-decoration: none; color: #141414; font-family: 'Tenor Sans', Arial, sans-serif; font-size: 28px; letter-spacing: 9px; text-transform: uppercase">Рефлекшн</a>
+<div class="hdr-right" style="justify-self: end; display: flex; flex-wrap: wrap; align-items: center; gap: 22px">
+<a href="#find" class="hdr-contacts" style="color: #141414; font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; text-decoration: none">Контакты</a>
+<a href="#assistant" style="background: #C2185B; color: #FFFFFF; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 15px 22px; text-decoration: none">Записаться</a>
+</div>
+</header>
+
+<section id="top" style="max-width: 1280px; margin: 0 auto; padding: 64px 32px 0">
+<div class="hero-logo" style="display: flex; justify-content: center; padding: 8px 0 48px"><img src="logo.png" alt="Логотип студии: ДА, Сила в любви, бьюти-студия" style="height: clamp(140px, 19vw, 250px); width: auto; max-width: 100%; display: block"></div>
+<h1 style="position: absolute; left: -9999px">Рефлекшн — ногтевая студия в Химках</h1>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 0; border-top: 1px solid #141414; margin-top: 8px">
+<div class="hero-col hero-first" style="padding: 32px 32px 40px 0; display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-family: 'Tenor Sans', Arial, sans-serif; font-size: 34px; line-height: 1.2">Маленький мир, <span style="color: #C2185B">созданный с&nbsp;любовью</span></p>
+</div>
+<div class="hero-col" style="padding: 32px 32px 40px; border-left: 1px solid #D2D2D6; display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-size: 17px; line-height: 1.65; color: #46464B">Вы заслужили больше, чем просто уход. Вы заслужили восхищённые взгляды. Мы создаём маникюр и педикюр, который выглядит по-настоящему дорого: тонко, эстетично и, что важно, прочно.</p>
+</div>
+<div class="hero-col" style="padding: 32px 0 40px 32px; border-left: 1px solid #D2D2D6; display: flex; flex-direction: column; gap: 14px; justify-content: space-between">
+<a href="#assistant" style="background: #141414; color: #ECECEE; font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 20px 24px; text-decoration: none; display: flex; justify-content: space-between; align-items: center">Записаться онлайн <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a>
+<a href="#price" style="border: 1px solid #141414; color: #141414; font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 19px 24px; text-decoration: none; display: flex; justify-content: space-between; align-items: center">Открыть прайс <span aria-hidden="true">↓</span></a>
+</div>
+</div>
+</section>
+
+<section style="background: #F7DCE8">
+<div style="max-width: 1280px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr))" class="nums">
+
+<div style="padding: 30px 24px 30px 0; display: flex; align-items: baseline; gap: 14px">
+<span class="num-big" style="font-family: 'Tenor Sans', Arial, sans-serif; font-size: 44px; color: #A0144B; white-space: nowrap">5,0</span>
+<span style="font-size: 14px; line-height: 1.4; color: #444448">рейтинг на Яндекс Картах</span>
+</div>
+
+<div style="padding: 30px 24px 30px 0; display: flex; align-items: baseline; gap: 14px">
+<span class="num-big" style="font-family: 'Tenor Sans', Arial, sans-serif; font-size: 44px; color: #A0144B; white-space: nowrap">117</span>
+<span style="font-size: 14px; line-height: 1.4; color: #444448">оценок от гостей</span>
+</div>
+
+<div style="padding: 30px 24px 30px 0; display: flex; align-items: baseline; gap: 14px">
+<span class="num-big" style="font-family: 'Tenor Sans', Arial, sans-serif; font-size: 44px; color: #A0144B; white-space: nowrap">2026</span>
+<span style="font-size: 14px; line-height: 1.4; color: #444448">награда «Хорошее место»</span>
+</div>
+
+<div style="padding: 30px 24px 30px 0; display: flex; align-items: baseline; gap: 14px">
+<span class="num-big" style="font-family: 'Tenor Sans', Arial, sans-serif; font-size: 44px; color: #A0144B; white-space: nowrap">7 дн.</span>
+<span style="font-size: 14px; line-height: 1.4; color: #444448">гарантийный ремонт бесплатно</span>
+</div>
+
+</div>
+</section>
+
+<section id="tryon" class="s-almond t-cat" style="--mx: 50%; --my: 38%; --ang: 180deg; background: #141414; color: #ECECEE">
+<div style="max-width: 1280px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr)); gap: 48px; align-items: center">
+<div class="try-stage" aria-hidden="true">
+<div class="finger"><div class="nail"></div></div>
+<div style="width: 100%; max-width: 420px; border-top: 1px solid #38383B"></div>
+<div class="try-mirror"><div class="finger"><div class="nail"></div></div></div>
+</div>
+<div class="try-text" style="display: flex; flex-direction: column; gap: 26px; padding: 72px 0">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: #FF9CC2">Примерочная</span>
+<h2 style="margin: 0; font-family: 'Tenor Sans', Arial, sans-serif; font-size: clamp(36px, 4.4vw, 60px); font-weight: 400; line-height: 1.05; text-transform: uppercase">Поймайте блик</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.65; color: #C8C8CC">Проведите курсором или пальцем по ногтю: кошачий глаз и втирка переливаются, как в жизни. Выберите форму и покрытие, а мы сделаем так же.</p>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #A0A0A6">Форма</span>
+<div style="display: flex; flex-wrap: wrap; gap: 8px" role="group" aria-label="Форма ногтя">
+<button type="button" class="chip" data-shape="oval" aria-pressed="false">Овал</button>
+<button type="button" class="chip" data-shape="almond" aria-pressed="true">Миндаль</button>
+<button type="button" class="chip" data-shape="square" aria-pressed="false">Квадрат</button>
+<button type="button" class="chip" data-shape="ballerina" aria-pressed="false">Балерина</button>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #A0A0A6">Покрытие</span>
+<div style="display: flex; flex-wrap: wrap; gap: 8px" role="group" aria-label="Покрытие">
+<button type="button" class="chip" data-finish="gloss" aria-pressed="false">Глянец</button>
+<button type="button" class="chip" data-finish="cat" aria-pressed="true">Кошачий глаз</button>
+<button type="button" class="chip" data-finish="chrome" aria-pressed="false">Втирка</button>
+<button type="button" class="chip" data-finish="french" aria-pressed="false">Френч</button>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; border-top: 1px solid #2E2E30; padding-top: 22px">
+<span id="try-price" aria-live="polite" style="font-size: 17px; line-height: 1.5">Маникюр + кошачий глаз — <b>4 100 ₽</b></span>
+<a href="#assistant" style="background: #FF9CC2; color: #141414; font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 17px 22px; text-decoration: none">Хочу так</a>
+</div>
+</div>
+</div>
+</section>
+
+<section id="ritual" style="max-width: 1280px; margin: 0 auto; padding: 112px 32px 48px; display: flex; flex-direction: column; gap: 56px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 32px; align-items: end">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: #C2185B">Наш подход</span>
+<h2 style="margin: 0; font-family: 'Tenor Sans', Arial, sans-serif; font-size: clamp(36px, 4.4vw, 60px); font-weight: 400; line-height: 1.05; text-transform: uppercase">Процедура под ключ</h2>
+</div>
+<p style="margin: 0; font-size: 18px; line-height: 1.65; color: #46464B">Покрытие у нас — это не только цвет. В стоимость уже входят пять шагов, и за каждый отвечает мастер.</p>
+</div>
+<ol style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(210px, 100%), 1fr)); border-top: 1px solid #141414">
+
+<li class="rit" style="padding: 28px 22px 32px 0; display: flex; flex-direction: column; gap: 14px; border-right: 1px solid #D2D2D6; margin-right: 22px">
+<span style="font-family: 'Tenor Sans', Arial, sans-serif; font-size: 64px; line-height: 1; color: #FF9CC2">01</span>
+<span style="font-size: 19px; font-weight: 700">Снятие</span>
+<span style="font-size: 15px; line-height: 1.6; color: #5B5B61">Аккуратно снимаем старое покрытие, без травматизации своего ногтя.</span>
+</li>
+
+<li class="rit" style="padding: 28px 22px 32px 0; display: flex; flex-direction: column; gap: 14px; border-right: 1px solid #D2D2D6; margin-right: 22px">
+<span style="font-family: 'Tenor Sans', Arial, sans-serif; font-size: 64px; line-height: 1; color: #FF9CC2">02</span>
+<span style="font-size: 19px; font-weight: 700">Анализ</span>
+<span style="font-size: 15px; line-height: 1.6; color: #5B5B61">Проводим осмотр кожи и ногтевой пластины, подбираем метод работы и даём рекомендации.</span>
+</li>
+
+<li class="rit" style="padding: 28px 22px 32px 0; display: flex; flex-direction: column; gap: 14px; border-right: 1px solid #D2D2D6; margin-right: 22px">
+<span style="font-family: 'Tenor Sans', Arial, sans-serif; font-size: 64px; line-height: 1; color: #FF9CC2">03</span>
+<span style="font-size: 19px; font-weight: 700">Архитектура</span>
+<span style="font-size: 15px; line-height: 1.6; color: #5B5B61">Мы не просто делаем выравнивание, мы работаем в технике моделирования, докладываем недостающие стенки и поднимаем клюющие ногти.</span>
+</li>
+
+<li class="rit" style="padding: 28px 22px 32px 0; display: flex; flex-direction: column; gap: 14px; border-right: 1px solid #D2D2D6; margin-right: 22px">
+<span style="font-family: 'Tenor Sans', Arial, sans-serif; font-size: 64px; line-height: 1; color: #FF9CC2">04</span>
+<span style="font-size: 19px; font-weight: 700">Покрытие</span>
+<span style="font-size: 15px; line-height: 1.6; color: #5B5B61">Тонко и ровно. Укрепление гелем уже в стоимости.</span>
+</li>
+
+<li class="rit" style="padding: 28px 22px 32px 0; display: flex; flex-direction: column; gap: 14px; border-right: 1px solid #D2D2D6; margin-right: 22px">
+<span style="font-family: 'Tenor Sans', Arial, sans-serif; font-size: 64px; line-height: 1; color: #FF9CC2">05</span>
+<span style="font-size: 19px; font-weight: 700">Гарантия</span>
+<span style="font-size: 15px; line-height: 1.6; color: #5B5B61">Если в течение 7 дней что-то не так — исправим бесплатно.</span>
+</li>
+
+</ol>
+</section>
+
+<section id="price" style="max-width: 1280px; margin: 0 auto; padding: 96px 32px 112px; display: flex; flex-direction: column; gap: 44px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px; border-bottom: 1px solid #141414; padding-bottom: 22px">
+<h2 style="margin: 0; font-family: 'Tenor Sans', Arial, sans-serif; font-size: clamp(36px, 4.4vw, 60px); font-weight: 400; line-height: 1.05; text-transform: uppercase">Прайс</h2>
+<span style="font-size: 15px; color: #5B5B61">Актуальные цены, как в онлайн-записи</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap: 48px 56px">
+
+<div style="display: flex; flex-direction: column; gap: 2px">
+<h3 style="margin: 0 0 14px; font-family: 'Tenor Sans', Arial, sans-serif; font-size: 22px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; color: #C2185B">Маникюр</h3>
+
+<div style="display: flex; align-items: flex-end; gap: 10px; padding: 11px 0">
+<span style="font-size: 16px; line-height: 1.4; max-width: 72%">Аппаратный / комбинированный</span>
+<span class="lead" aria-hidden="true"></span>
+<span style="font-size: 16px; font-weight: 700; white-space: nowrap">2 000 ₽</span>
+</div>
+
+<div style="display: flex; align-items: flex-end; gap: 10px; padding: 11px 0">
+<span style="font-size: 16px; line-height: 1.4; max-width: 72%">С покрытием, укрепление входит</span>
+<span class="lead" aria-hidden="true"></span>
+<span style="font-size: 16px; font-weight: 700; white-space: nowrap">3 600 ₽</span>
+</div>
+
+<div style="display: flex; align-items: flex-end; gap: 10px; padding: 11px 0">
+<span style="font-size: 16px; line-height: 1.4; max-width: 72%">С покрытием и дизайном</span>
+<span class="lead" aria-hidden="true"></span>
+<span style="font-size: 16px; font-weight: 700; white-space: nowrap">4 100 ₽</span>
+</div>
+
+<div style="display: flex; align-items: flex-end; gap: 10px; padding: 11px 0">
+<span style="font-size: 16px; line-height: 1.4; max-width: 72%">Кошачий глаз, втирка, белый френч</span>
+<span class="lead" aria-hidden="true"></span>
+<span style="font-size: 16px; font-weight: 700; white-space: nowrap">4 100 ₽</span>
+</div>
+
+<div style="display: flex; align-items: flex-end; gap: 10px; padding: 11px 0">
+<span style="font-size: 16px; line-height: 1.4; max-width: 72%">С DIP-системой</span>
+<span class="lead" aria-hidden="true"></span>
+<span style="font-size: 16px; font-weight: 700; white-space: nowrap">3 700 ₽</span>
+</div>
+
+<div style="display: flex; align-items: flex-end; gap: 10px; padding: 11px 0">
+<span style="font-size: 16px; line-height: 1.4; max-width: 72%">С витаминным бандированием</span>
+<span class="lead" aria-hidden="true"></span>
+<span style="font-size: 16px; font-weight: 700; white-space: nowrap">2 500 ₽</span>
+</div>
+
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 2px">
+<h3 style="margin: 0 0 14px; font-family: 'Tenor Sans', Arial, sans-serif; font-size: 22px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; color: #C2185B">Педикюр</h3>
+
+<div style="display: flex; align-items: flex-end; gap: 10px; padding: 11px 0">
+<span style="font-size: 16px; line-height: 1.4; max-width: 72%">SMART без покрытия</span>
+<span class="lead" aria-hidden="true"></span>
+<span style="font-size: 16px; font-weight: 700; white-space: nowrap">3 000 ₽</span>
+</div>
+
+<div style="display: flex; align-items: flex-end; gap: 10px; padding: 11px 0">
+<span style="font-size: 16px; line-height: 1.4; max-width: 72%">SMART с гель-лаком</span>
+<span class="lead" aria-hidden="true"></span>
+<span style="font-size: 16px; font-weight: 700; white-space: nowrap">4 000 ₽</span>
+</div>
+
+<div style="display: flex; align-items: flex-end; gap: 10px; padding: 11px 0">
+<span style="font-size: 16px; line-height: 1.4; max-width: 72%">Фруктовый без покрытия</span>
+<span class="lead" aria-hidden="true"></span>
+<span style="font-size: 16px; font-weight: 700; white-space: nowrap">4 000 ₽</span>
+</div>
+
+<div style="display: flex; align-items: flex-end; gap: 10px; padding: 11px 0">
+<span style="font-size: 16px; line-height: 1.4; max-width: 72%">Фруктовый с гель-лаком</span>
+<span class="lead" aria-hidden="true"></span>
+<span style="font-size: 16px; font-weight: 700; white-space: nowrap">5 000 ₽</span>
+</div>
+
+<div style="display: flex; align-items: flex-end; gap: 10px; padding: 11px 0">
+<span style="font-size: 16px; line-height: 1.4; max-width: 72%">Снятие + педикюр без покрытия</span>
+<span class="lead" aria-hidden="true"></span>
+<span style="font-size: 16px; font-weight: 700; white-space: nowrap">3 200 ₽</span>
+</div>
+
+<div style="display: flex; align-items: flex-end; gap: 10px; padding: 11px 0">
+<span style="font-size: 16px; line-height: 1.4; max-width: 72%">Парафинотерапия ног</span>
+<span class="lead" aria-hidden="true"></span>
+<span style="font-size: 16px; font-weight: 700; white-space: nowrap">500 ₽</span>
+</div>
+
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 2px">
+<h3 style="margin: 0 0 14px; font-family: 'Tenor Sans', Arial, sans-serif; font-size: 22px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; color: #C2185B">Наращивание и уход</h3>
+
+<div style="display: flex; align-items: flex-end; gap: 10px; padding: 11px 0">
+<span style="font-size: 16px; line-height: 1.4; max-width: 72%">Наращивание</span>
+<span class="lead" aria-hidden="true"></span>
+<span style="font-size: 16px; font-weight: 700; white-space: nowrap">5 000 ₽</span>
+</div>
+
+<div style="display: flex; align-items: flex-end; gap: 10px; padding: 11px 0">
+<span style="font-size: 16px; line-height: 1.4; max-width: 72%">Коррекция наращивания</span>
+<span class="lead" aria-hidden="true"></span>
+<span style="font-size: 16px; font-weight: 700; white-space: nowrap">4 200 ₽</span>
+</div>
+
+<div style="display: flex; align-items: flex-end; gap: 10px; padding: 11px 0">
+<span style="font-size: 16px; line-height: 1.4; max-width: 72%">Моделирование гелем / полигелем</span>
+<span class="lead" aria-hidden="true"></span>
+<span style="font-size: 16px; font-weight: 700; white-space: nowrap">1 000 ₽</span>
+</div>
+
+<div style="display: flex; align-items: flex-end; gap: 10px; padding: 11px 0">
+<span style="font-size: 16px; line-height: 1.4; max-width: 72%">Покрытие плёнками</span>
+<span class="lead" aria-hidden="true"></span>
+<span style="font-size: 16px; font-weight: 700; white-space: nowrap">1 500 ₽</span>
+</div>
+
+<div style="display: flex; align-items: flex-end; gap: 10px; padding: 11px 0">
+<span style="font-size: 16px; line-height: 1.4; max-width: 72%">Экоглянцевание (к маникюру)</span>
+<span class="lead" aria-hidden="true"></span>
+<span style="font-size: 16px; font-weight: 700; white-space: nowrap">500 ₽</span>
+</div>
+
+<div style="display: flex; align-items: flex-end; gap: 10px; padding: 11px 0">
+<span style="font-size: 16px; line-height: 1.4; max-width: 72%">Парафинотерапия рук</span>
+<span class="lead" aria-hidden="true"></span>
+<span style="font-size: 16px; font-weight: 700; white-space: nowrap">500 ₽</span>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="assistant" style="background: #141414; color: #ECECEE">
+<div style="max-width: 1280px; margin: 0 auto; padding: 104px 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr)); gap: 64px; align-items: start">
+<div style="display: flex; flex-direction: column; gap: 22px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: #FF9CC2">Онлайн-помощник · 24/7</span>
+<h2 style="margin: 0; font-family: 'Tenor Sans', Arial, sans-serif; font-size: clamp(36px, 4.4vw, 60px); font-weight: 400; line-height: 1.05; text-transform: uppercase">Спросите — и&nbsp;запишитесь</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.65; color: #C8C8CC">Опишите своими словами, что беспокоит, и помощник подберёт процедуру, назовёт цену и предложит свободное время. Без звонков и ожидания ответа в мессенджере.</p>
+<div style="display: flex; flex-direction: column; border-top: 1px solid #2E2E30">
+
+<div data-open-chat="1" style="display: flex; justify-content: space-between; gap: 16px; padding: 16px 0; border-bottom: 1px solid #2E2E30; font-size: 16px; cursor: pointer"><span>Что делать, если ногти клюют?</span><span aria-hidden="true" style="color: #FF9CC2">→</span></div>
+
+<div data-open-chat="1" style="display: flex; justify-content: space-between; gap: 16px; padding: 16px 0; border-bottom: 1px solid #2E2E30; font-size: 16px; cursor: pointer"><span>Чем DIP-система лучше геля?</span><span aria-hidden="true" style="color: #FF9CC2">→</span></div>
+
+<div data-open-chat="1" style="display: flex; justify-content: space-between; gap: 16px; padding: 16px 0; border-bottom: 1px solid #2E2E30; font-size: 16px; cursor: pointer"><span>Сколько стоит фруктовый педикюр?</span><span aria-hidden="true" style="color: #FF9CC2">→</span></div>
+
+<div data-open-chat="1" style="display: flex; justify-content: space-between; gap: 16px; padding: 16px 0; border-bottom: 1px solid #2E2E30; font-size: 16px; cursor: pointer"><span>Есть окно в субботу после обеда?</span><span aria-hidden="true" style="color: #FF9CC2">→</span></div>
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px; padding-top: 6px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #A0A0A6">Удобнее в мессенджере?</span>
+<div style="display: flex; flex-wrap: wrap; gap: 10px">
+<a href="https://wa.me/79778518748?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F." style="border: 1px solid #FF9CC2; color: #FF9CC2; font-size: 14px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 15px 20px; text-decoration: none">Записаться в WhatsApp</a>
+<a href="https://t.me/studio_reflection?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F." style="border: 1px solid #FF9CC2; color: #FF9CC2; font-size: 14px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 15px 20px; text-decoration: none">Записаться в Telegram</a>
+</div>
+</div>
+</div>
+<div data-open-chat="1" style="border: 1px solid #38383B; background: #1F1F21; cursor: pointer">
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 16px 22px; border-bottom: 1px solid #38383B; font-size: 13px; letter-spacing: 2px; text-transform: uppercase">
+<span style="font-family: 'Tenor Sans', Arial, sans-serif; font-size: 15px; letter-spacing: 4px">Рефлекшн</span>
+<span style="color: #8FD3AE">● онлайн</span>
+</div>
+<div style="padding: 24px 22px; display: flex; flex-direction: column; gap: 18px; font-size: 15px; line-height: 1.55">
+<div style="display: flex; flex-direction: column; gap: 4px; max-width: 86%; align-self: flex-end; text-align: right"><span style="font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: #A0A0A6">Вы</span><span style="background: #ECECEE; color: #141414; padding: 12px 14px">Хочу маникюр с покрытием, ногти слоятся</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px; max-width: 90%"><span style="font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: #FF9CC2">Помощник</span><span style="border-left: 2px solid #FF9CC2; padding: 4px 0 4px 14px; color: #E9E9EB">Подойдёт аппаратный маникюр с покрытием — 3 600 ₽, укрепление гелем уже входит. Для слоящихся ногтей советуем добавить витаминное бандирование.</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: #A0A0A6">Свободное время</span>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px">
+<span style="border: 1px solid #5E5E62; padding: 10px 0; text-align: center; font-weight: 600">Сб 11:00</span>
+<span style="background: #FF9CC2; color: #141414; padding: 11px 0; text-align: center; font-weight: 700">Сб 14:30</span>
+<span style="border: 1px solid #5E5E62; padding: 10px 0; text-align: center; font-weight: 600">Вс 12:00</span>
+</div></div>
+</div>
+<form style="display: flex; border-top: 1px solid #38383B">
+<label for="ask" style="position: absolute; left: -9999px">Ваш вопрос</label>
+<input id="ask" type="text" placeholder="Ваш вопрос…" style="flex: 1; min-width: 0; border: 0; background: transparent; color: #ECECEE; padding: 18px 22px; font: inherit; font-size: 15px">
+<button type="button" style="border: 0; background: #C2185B; color: #FFFFFF; padding: 0 26px; font: inherit; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase">Отправить</button>
+</form>
+</div>
+</div>
+</section>
+
+<section id="guests" style="max-width: 1280px; margin: 0 auto; padding: 112px 32px 96px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr)); gap: 64px; align-items: start">
+<div style="display: flex; flex-direction: column; gap: 18px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: #C2185B">Гости о нас</span>
+<div style="display: flex; align-items: flex-end; gap: 18px"><span style="font-family: 'Tenor Sans', Arial, sans-serif; font-size: 140px; line-height: 0.85">5,0</span><span style="font-size: 15px; line-height: 1.5; color: #46464B; padding-bottom: 6px">88 отзывов · 117 оценок<br>на Яндекс Картах</span></div>
+<p style="margin: 0; font-size: 17px; line-height: 1.65; color: #46464B">Больше всего гости отмечают ровную архитектуру, внимание к сложным ногтям и атмосферу. Отдельная категория в отзывах — наш кофе.</p>
+<a href="https://yandex.ru/maps/org/reflekshn/187572318805/reviews/" style="align-self: flex-start; color: #141414; font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid #141414; padding-bottom: 4px">Читать отзывы на Картах →</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 22px; padding-top: 8px">
+
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 12px; font-size: 16px"><span style="font-weight: 700">Маникюр</span><span style="color: #5B5B61">100% положительных · 57 отзывов</span></div>
+<div style="height: 6px; background: #D9D9DD"><div style="height: 6px; width: 100%; background: #C2185B"></div></div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 12px; font-size: 16px"><span style="font-weight: 700">Атмосфера</span><span style="color: #5B5B61">100% положительных · 34 отзыва</span></div>
+<div style="height: 6px; background: #D9D9DD"><div style="height: 6px; width: 100%; background: #C2185B"></div></div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 12px; font-size: 16px"><span style="font-weight: 700">Компетентность</span><span style="color: #5B5B61">97% положительных · 31 отзыв</span></div>
+<div style="height: 6px; background: #D9D9DD"><div style="height: 6px; width: 97%; background: #C2185B"></div></div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 12px; font-size: 16px"><span style="font-weight: 700">Педикюр</span><span style="color: #5B5B61">100% положительных · 20 отзывов</span></div>
+<div style="height: 6px; background: #D9D9DD"><div style="height: 6px; width: 100%; background: #C2185B"></div></div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 12px; font-size: 16px"><span style="font-weight: 700">Кофе</span><span style="color: #5B5B61">100% положительных · 16 отзывов</span></div>
+<div style="height: 6px; background: #D9D9DD"><div style="height: 6px; width: 100%; background: #C2185B"></div></div>
+</div>
+
+</div>
+</section>
+
+<div aria-hidden="true" style="border-top: 1px solid #141414; border-bottom: 1px solid #141414; overflow: hidden">
+<div class="perks" style="max-width: 1280px; margin: 0 auto; padding: 20px 32px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 28px; font-family: 'Tenor Sans', Arial, sans-serif; font-size: 20px; letter-spacing: 3px; text-transform: uppercase">
+<span>Кофе</span><span style="color: #C2185B">✦</span><span>Конфеты</span><span style="color: #C2185B">✦</span><span>Wi‑Fi</span><span style="color: #C2185B">✦</span><span>Можно с собакой</span><span style="color: #C2185B">✦</span><span>Парковка</span><span style="color: #C2185B">✦</span><span>Пандус</span>
+</div>
+</div>
+
+<section id="find" style="max-width: 1280px; margin: 0 auto; padding: 96px 32px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap: 0; align-items: stretch">
+<div style="display: flex; flex-direction: column; gap: 0; border-top: 1px solid #141414">
+<h2 style="margin: 0; padding: 26px 0; font-family: 'Tenor Sans', Arial, sans-serif; font-size: clamp(32px, 3.6vw, 48px); font-weight: 400; text-transform: uppercase">Как нас найти</h2>
+<div class="find-row" style="display: flex; justify-content: space-between; gap: 16px; padding: 18px 32px 18px 0; border-top: 1px solid #D2D2D6"><span style="font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #5B5B61">Адрес</span><span style="font-size: 17px; font-weight: 600; text-align: right">Химки, Совхозная ул., 2</span></div>
+<div class="find-row" style="display: flex; justify-content: space-between; gap: 16px; padding: 18px 32px 18px 0; border-top: 1px solid #D2D2D6"><span style="font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #5B5B61">Часы</span><span style="font-size: 17px; font-weight: 600; text-align: right">[ГРАФИК], до 21:00</span></div>
+<div class="find-row" style="display: flex; justify-content: space-between; gap: 16px; padding: 18px 32px 18px 0; border-top: 1px solid #D2D2D6"><span style="font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #5B5B61">Телефон</span><a href="tel:+79778518748" style="font-size: 17px; font-weight: 700; color: #141414; text-decoration: none">+7 977 851-87-48</a></div>
+<div class="find-row" style="display: flex; justify-content: space-between; gap: 16px; padding: 18px 32px 18px 0; border-top: 1px solid #D2D2D6; border-bottom: 1px solid #D2D2D6"><span style="font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #5B5B61">Написать</span><span style="display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 18px; font-size: 16px; font-weight: 700"><a href="https://t.me/studio_reflection" style="color: #141414">Telegram</a><a href="https://wa.me/79778518748" style="color: #141414">WhatsApp</a><a href="https://max.ru/u/f9LHodD0cOKj_CBrgIKjNyeFcLeN4wUpZmZvsA8iDcEn2pLBkaaZtofdPlk" style="color: #141414">MAX</a></span></div>
+<div class="find-row" style="display: flex; justify-content: space-between; gap: 16px; padding: 18px 32px 18px 0; border-bottom: 1px solid #D2D2D6"><span style="font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #5B5B61">Соцсети</span><span style="display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 18px; font-size: 16px; font-weight: 700"><a href="https://instagram.com/nailstudio_reflection/" style="color: #141414">Instagram*</a><a href="https://t.me/nailstudio_reflection" style="color: #141414">Telegram-канал</a></span></div>
+<a href="#assistant" class="find-cta" style="margin: 28px 32px 40px 0; background: #C2185B; color: #FFFFFF; font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 20px 24px; text-decoration: none; display: flex; justify-content: space-between">Записаться онлайн <span aria-hidden="true">→</span></a>
+<p style="margin: 0 32px 32px 0; font-size: 12px; line-height: 1.5; color: #5B5B61">* Instagram принадлежит компании Meta, признанной экстремистской организацией и запрещённой в РФ.</p>
+</div>
+<div style="min-height: 460px; border-top: 1px solid #231F22; background: #EAE4E6"><iframe title="Рефлекшн на Яндекс Картах" src="https://yandex.ru/map-widget/v1/?ll=37.482413%2C55.897247&amp;z=16&amp;pt=37.482413%2C55.897247%2Cpm2rdm" width="100%" height="460" frameborder="0" loading="lazy" style="display:block;border:0"></iframe></div>
+</section>
+
+<footer style="background: #141414; color: #C8C8CC; margin-top: 96px">
+<div style="max-width: 1280px; margin: 0 auto; padding: 40px 32px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; font-size: 14px">
+<span style="font-family: 'Tenor Sans', Arial, sans-serif; font-size: 22px; letter-spacing: 8px; text-transform: uppercase; color: #ECECEE">Рефлекшн</span>
+<span style="display: flex; flex-wrap: wrap; gap: 20px"><a href="https://instagram.com/nailstudio_reflection/" style="color: #FF9CC2">Instagram*</a><a href="https://t.me/nailstudio_reflection" style="color: #FF9CC2">Telegram-канал</a></span>
+<span>Ногтевая студия · Химки</span>
+<span>Сайт и помощник — One Reply</span>
+</div>
+</footer>
+
+</div>
+<script src="widget.js?v=2" defer></script>
+<script>document.addEventListener("click",function(e){var t=e.target.closest('a[href="#assistant"],[data-open-chat]');if(t&&window.StandbotChat){e.preventDefault();window.StandbotChat.open();}});</script>
+<script>
+(function(){
+  var w=document.getElementById("tryon"); if(!w) return;
+  var st=w.querySelector(".try-stage"), nail=w.querySelector(".nail"), last=0, t=0;
+  var PRICE={gloss:"Маникюр с покрытием — <b>3 600 ₽</b>",cat:"Маникюр + кошачий глаз — <b>4 100 ₽</b>",chrome:"Маникюр + втирка — <b>4 100 ₽</b>",french:"Маникюр + белый френч — <b>4 100 ₽</b>"};
+  function cl(v){return Math.max(-20,Math.min(120,v));}
+  function set(x,y){w.style.setProperty("--mx",x.toFixed(1)+"%");w.style.setProperty("--my",y.toFixed(1)+"%");w.style.setProperty("--ang",(x*3.6).toFixed(0)+"deg");}
+  function move(e){var r=nail.getBoundingClientRect();set(cl((e.clientX-r.left)/r.width*100),cl((e.clientY-r.top)/r.height*100));last=Date.now();}
+  st.addEventListener("pointermove",move); st.addEventListener("pointerdown",move);
+  if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+    (function loop(){ if(Date.now()-last>2500){t+=16;set(50+38*Math.sin(t/1700),40+30*Math.sin(t/2600));} requestAnimationFrame(loop); })();
+  }
+  function pick(attr,prefix){
+    w.querySelectorAll("["+attr+"]").forEach(function(b){
+      b.addEventListener("click",function(){
+        var v=b.getAttribute(attr);
+        w.className=w.className.split(" ").filter(function(c){return c.indexOf(prefix)!==0;}).concat(prefix+v).join(" ");
+        w.querySelectorAll("["+attr+"]").forEach(function(o){o.setAttribute("aria-pressed",o===b?"true":"false");});
+        if(attr==="data-finish") document.getElementById("try-price").innerHTML=PRICE[v];
+      });
+    });
+  }
+  pick("data-shape","s-"); pick("data-finish","t-");
+})();
+</script>
+</body>
+</html>
